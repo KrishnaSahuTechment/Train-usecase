@@ -1,0 +1,12 @@
+PNR:        : 143_20210815_100
+Train no    : 1004
+Train Name  : Udyan
+Express
+From      : Mumbai
+To          : Bangalore
+Travel Date : Sat Oct 16 00:00:00 IST 2021
+Passengers  :
+Name : Krish Age: 26 Gender: M Fare : 1500.0
+Name : Madhu Age: 23 Gender: F Fare : 375.0
+
+Total Price : 3750.0

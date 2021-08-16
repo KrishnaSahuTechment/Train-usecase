@@ -1,0 +1,12 @@
+PNR:        : 134_20210816_100
+Train no    : 1001
+Train Name  : Shatabdi
+Express
+From      : Bangalore
+To          : Delhi
+Travel Date : Tue Nov 11 00:00:00 IST 21
+Passengers  :
+Name : kk Age: 45 Gender: m Fare : 2500.0
+Name : mk Age: 54 Gender: f Fare : 625.0
+
+ Total Price : 6250.0
