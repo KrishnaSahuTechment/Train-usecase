@@ -9,10 +9,7 @@ import java.io.IOException;
 import java.sql.*;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.Scanner;
-
 import java.util.*;
 import com.techment.model.Passenger;
 import com.techment.model.Ticket;
@@ -21,6 +18,7 @@ import com.techment.utility.ConnectionProperty;
 import java.io.*;	
 
 import java.io.*;
+import com.techment.*;
 
 class NameSorting implements Comparator<Passenger>
 {
@@ -52,7 +50,7 @@ public class TicketApplication {
 				 double ticketPrice=0;
 				 double sumFare = 0;
 				 String PNR=null;
-				 
+				
 				
 				
 				 
@@ -129,7 +127,31 @@ public class TicketApplication {
 					System.out.println("\nEnter Travel Date (dd/MM/yyyy) : ");
 					String travelDate = scanner.next();
 					
-			//		travelDate="31/12/1998";  
+					
+					//compare date
+					
+					String[] splitVal = travelDate.split("/");
+					int d=Integer.parseInt(splitVal[0]);
+					int m=Integer.parseInt(splitVal[1]);
+					int y =Integer.parseInt(splitVal[2]);
+					//System.out.println(d+" "+m+" "+y);
+					Date currentDate = new Date();
+					System.out.println(currentDate);
+					System.out.println( dateCompare(d,m,y));
+					
+					boolean checkOldDate = dateCompare(d,m,y);
+					
+					if(checkOldDate==false)
+					{
+						
+						System.out.println("Travel Date is before current date");
+					}
+					else
+					{
+						
+						
+					
+			
 				    
 					Date date1=new SimpleDateFormat("dd/MM/yyyy").parse(travelDate);  
 					
@@ -222,8 +244,8 @@ public class TicketApplication {
 				bw.write("Train no    : "+trainNo);
 				bw.newLine();
 				bw.write("Train Name  : "+trainName);
-		//		bw.newLine();
-				bw.write("\nFrom      : "+source);
+				bw.newLine();
+				bw.write("From        : "+source);
 				bw.newLine();
 				bw.write("To          : "+destination);
 				bw.newLine();
@@ -256,6 +278,7 @@ public class TicketApplication {
 				
 				num=0;
 				}
+				}
 				else
 					System.out.println("Train with given train number does not exist");
 		
@@ -273,6 +296,29 @@ public class TicketApplication {
 			}
 	}while(true); //closing of while loop
 		
+	}
+
+	private static Boolean dateCompare(int d, int m, int y) {
+		// TODO Auto-generated method stub
+		 // creating a Calendar object
+	     Calendar c = Calendar.getInstance();
+
+	     // set Month
+	     // MONTH starts with 0 i.e. ( 0 - Jan)
+	     c.set(Calendar.MONTH, m);
+
+	     // set Date
+	     c.set(Calendar.DATE, d);
+
+	     // set Year
+	     c.set(Calendar.YEAR, y);
+
+	     // creating a date object with specified time.
+	     Date dateOne = c.getTime();
+	     Date currentDate = new Date();
+	     return currentDate.before(dateOne);
+		
+	
 	}
 
 }

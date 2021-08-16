@@ -2,11 +2,12 @@ PNR:        : BC_20210816_101
 Train no    : 1005
 Train Name  : Brindavan
 Express
-From      : Bangalore
+From        : Bangalore
 To          : Chennai
-Travel Date : Thu May 20 00:00:00 IST 2021
-Passengers  :
-Name : Aman Age: 54 Gender: M Fare : 1000.0
-Name : Seema Age: 26 Gender: F Fare : 250.0
+Travel Date : Sun Apr 11 00:00:00 IST 2021
+Passengers  : 
 
- Total Price : 2500.0
+Name : kk Age: 26 Gender: m Fare : 1000.0
+Name : mk Age: 12 Gender: f Fare : 500.0
+
+ Total Price : 3000.0
